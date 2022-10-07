@@ -8,42 +8,56 @@
 </head>
 <body>
 <header>
-    <img src="images/logo.png" alt="logo" width="130" height="103"/>
-    <h1>CO&GO</h1>
-    <nav>
-        <ul>
-            <li><a href="index.html"><h5>home</h5></a></li>
-            <li><a href="page2.html"><h5>drinks</h5></a></li>
-            <li><a href="page3.html"><h5>about us</h5></a></li>
-        </ul>
-    </nav>
+    <div class="header">
+        <img class="header__logo" src="images/logo.png" alt="logo"/>
+        <div class="header__title">CO&GO</div>
+        <nav class="header-nav">
+            <a href="index.html" class="nav__home">HOME</a>
+            <a href="page2.html" class="nav__menu">MENU</a>
+            <a href="page3.html" class="nav__about">ABOUT US</a>
+        </nav>
+    </div>
 </header>
 <main>
-    <div>
-        <p>
-            One day the owner of CO&GO was so depressed and didn’t want to go out of her bed,
-            but the smell of the coffee from the nearest coffee shop made her get up, and s
-            he found out that this world is so beautiful with a cup of the greatest drink.
-        </p>
+    <div class="main-part">
+        <div>
+            <p>
+                One day the owner of CO&GO was so depressed and did not want to go out of her bed,
+                but the smell of the coffee from the nearest coffee shop made her get up.
+                She went out of her flat, took coffee and saw pictures that made her really happy.
+                She noticed leaves that had fallen to streets and people enjoying their life, and
+                she understood that this world is so beautiful with a cup of the greatest drink.
+            </p>
 
-        <p>
-            So we hope that our coffee will help you in the darkest times and will be part of the brightest ones!
-        </p>
-        <img src="images/img2.jpg" alt="coffee" width="378" height="397"/>
+            <p>
+                So we hope that our coffee will help you in the darkest times and will be part of the brightest ones!
+            </p>
+        </div>
+        <div>
+            <img class="main__picture" src="images/img2.jpg" alt="coffee"/>
+        </div>
     </div>
-    <div>
-        <h3>HOT BEVERAGES</h3>
-        <img src="images/img3.png" alt="sales" width="378" height="397"/>
-        <h3>DELICIOUS BUNS</h3>
-        <img src="images/img4.png" alt="sales" width="378" height="397"/>
-        <h3>COLD BEVERAGES</h3>
-        <img src="images/img5.png" alt="sales" width="378" height="397"/>
-    </div>
+
+    <nav class="container">
+        <a href="page2.html" class="container-modules">
+            <div class="text">HOT BEVERAGES</div>
+            <img class="container-module__item" src="images/img3.png" alt="hot drinks"/>
+        </a>
+        <a href="page2.html" class="container-modules">
+            <div class="text">DELICIOUS BUNS</div>
+            <img class="container-module__item" src="images/img4.png" alt="bakery"/>
+        </a>
+        <a href="page2.html" class="container-modules">
+            <div class="text">COLD BEVERAGES</div>
+            <img class="container-module__item" src="images/img5.png" alt="cold drinks"/>
+        </a>
+    </nav>
+
 </main>
 <footer>
-    <ul><b>Contacts</b>
+    <ul>Contacts:
         <li>Address: Saint-Petersburg, Lenin Street, 12</li>
-        <li>co_n_go@gmail.com</li>
+        <li>Email: co_n_go@gmail.com</li>
     </ul>
 </footer>
 </body>
