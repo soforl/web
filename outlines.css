@@ -1,40 +1,44 @@
 body {
     background: #EFEAE6;
-    
 }
 
-.header {
-    /*position: absolute;*/
-    width: 100%;
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
     height: 60px;
-    left: 0px;
-    top: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
 
     background: linear-gradient(0deg, rgba(255, 236, 226, 0.2), rgba(255, 236, 226, 0.2)), #85B7BC;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+.left{
+    display: flex;
+    align-items: center;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+}
+
 .header__logo {
-    /*position: absolute;*/
     width: 74px;
     height: 60px;
-    left: 21px;
-    /*top: 6px;*/
 
     mix-blend-mode: darken;
 }
 
 .header__title {
-    position: absolute;
-    width: 185px;
-    height: 45px;
-    left: 99px;
-    top: 21px;
-
     font-family: 'Gravitas One', serif;
     font-weight: 400;
     font-size: 25px;
-    line-height: 32px;
 
     color: #735840;
 }
@@ -48,27 +52,18 @@ body {
 }
 
 .nav__home {
-    position: absolute;
     width: 87px;
     height: 31px;
-    left: 890px;
-    top: 21px;
 }
 
 .nav__menu {
-    position: absolute;
     width: 83px;
     height: 31px;
-    left: 1068px;
-    top: 22px;
 }
 
 .nav__about {
-    position: absolute;
     width: 142px;
     height: 31px;
-    left: 1241px;
-    top: 21px;
 }
 
 a {
@@ -78,14 +73,20 @@ a {
 
 .main-part {
     display: flex;
-    width: 100%;
-    height: 430px;
-
-    /*top: 85px;*/
+    flex-direction: row;
+    height: 390px;
+    margin: 15px;
+    flex-wrap: nowrap;
 
     background: rgba(181, 165, 146, 0.62);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
 
+.main__text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
 }
 
 p {
@@ -94,34 +95,47 @@ p {
     font-weight: 400;
     font-size: 20px;
     line-height: 35px;
-    display: flex;
-    flex-direction: column;
+    margin-left: 15px;
 }
 
 .main__picture {
+    display: flex;
     width: 350px;
-    height: 100%;
-    float: right;
-    text-align: left;
 }
 
 .container {
     display: flex;
     justify-content: space-between;
+    margin: 15px;
+    flex-wrap: nowrap;
+    /*margin-bottom: 15px;*/
 }
 
 .container-modules {
-    width: 350px;
-    height: 350px;
-    /*top: 603px;*/
+    display: flex;
+    width: 490px;
+    height: 330px;
 
     background: #85B7BC;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .container-module__item {
-    width: 350px;
-    height: 350px;
+    display: flex;
+    flex-direction: row;
+    width: 320px;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+footer {
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: nowrap;
+
+    background: linear-gradient(0deg, rgba(255, 236, 226, 0.2), rgba(255, 236, 226, 0.2)), #85B7BC;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -131,20 +145,24 @@ ul {
     font-weight: 400;
     font-size: 20px;
     line-height: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .text {
+    display: flex;
+    align-items: center;
     font-family: 'Gravitas One', serif;
     font-weight: 400;
     font-size: 20px;
     line-height: 25px;
     text-align: center;
 
-    display: flex;
-    align-items: center;
 
     color: #73584B;
-
 }
 
 .picture {
@@ -153,6 +171,64 @@ ul {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+@media screen and (max-width: 1000px){
+    .main__picture{
+        display: none;
+    }
+}
 
+@media screen and (max-width: 600px){
+    .main-part{
+        display: none;
+    }
+}
 
+table{
+    /*min-width: 100vw;*/
+    font-family: 'Gravitas One', serif;
+    /*width: auto;*/
+    /*flex: 1;*/
+    display: grid;
+    /*border-collapse: collapse;*/
+    grid-template-columns:
+    minmax(100px, 1fr)
+    minmax(100px, 1.67fr);
+    margin: 15px;
+}
 
+thead,
+tbody,
+tr {
+    display: contents;
+}
+
+th,
+td {
+    padding: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+th {
+    /*top: 0;*/
+    background: #B5A592;
+    text-align: left;
+    font-weight: normal;
+    font-size: 1.1rem;
+    color: #73584B;
+}
+
+th:last-child {
+    border: 0;
+}
+
+td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #73584B;
+}
+
+tr:nth-child(even) td {
+    background: #B5A592;
+}
