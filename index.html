@@ -5,9 +5,12 @@
     <title>CO&GO</title>
     <link href="outlines.css" rel="stylesheet">
     <meta name="description" content="Coffee shop">
+    <script type="text/javascript" src="/scripts/script.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=Gravitas+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=Gravitas+One&display=swap"
+          rel="stylesheet">
+    <script src="/scripts/script.js" defer></script>
 </head>
 <body>
 <header>
@@ -16,7 +19,7 @@
         <div class="header__title">CO&GO</div>
     </div>
     <nav class="header-nav right">
-        <a href="index.html" class="nav__home">HOME</a>
+        <a href="index.html" class="nav__home nav__active-page">HOME</a>
         <a href="page2.html" class="nav__menu">MENU</a>
         <a href="page3.html" class="nav__about">ABOUT US</a>
     </nav>
@@ -40,20 +43,57 @@
         <img class="main__picture" src="images/img2.jpg" alt="coffee"/>
     </div>
 
-    <nav class="container">
-        <a href="page2.html" class="container-modules">
-            <div class="text">HOT BEVERAGES</div>
-            <img class="container-module__item" src="images/img3.png" alt="hot drinks"/>
-        </a>
-        <a href="page2.html" class="container-modules">
-            <div class="text">DELICIOUS BUNS</div>
-            <img class="container-module__item" src="images/img4.png" alt="bakery"/>
-        </a>
-        <a href="page2.html" class="container-modules">
-            <div class="text">COLD BEVERAGES</div>
-            <img class="container-module__item" src="images/img5.png" alt="cold drinks"/>
-        </a>
-    </nav>
+
+    <div class="slider">
+        <div class="itc-slider" data-slider="itc-slider" data-loop="true" data-autoplay="false">
+            <div class="itc-slider__wrapper">
+                <div class="itc-slider__items">
+                    <div class="itc-slider__item">
+                        <div class="container-modules">
+                            <div class="text">HOT BEVERAGES</div>
+                            <img class="container-module__item" src="images/img3.png" alt="hot drinks"/>
+                        </div>
+                    </div>
+                    <div class="itc-slider__item">
+                        <div class="container-modules">
+                            <div class="text">DELICIOUS BUNS</div>
+                            <img class="container-module__item" src="images/img4.png" alt="bakery"/>
+                        </div>
+                    </div>
+                    <div class="itc-slider__item">
+                        <div class="container-modules">
+                            <div class="text">COLD BEVERAGES</div>
+                            <img class="container-module__item" src="images/img5.png" alt="cold drinks"/>
+                        </div>
+                    </div>
+                    <div class="itc-slider__item">
+                        <div class="container-modules">
+                            <div class="text">COLD BEVERAGES</div>
+                            <img class="container-module__item" src="images/img5.png" alt="cold drinks"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="itc-slider__btn itc-slider__btn_prev"></button>
+            <button class="itc-slider__btn itc-slider__btn_next"></button>
+        </div>
+    </div>
+
+<!--    <div class="container">-->
+<!--        <div class="container-modules">-->
+<!--            <div class="text">HOT BEVERAGES</div>-->
+<!--            <img class="container-module__item" src="images/img3.png" alt="hot drinks"/>-->
+<!--        </div>-->
+<!--        <div class="container-modules">-->
+<!--            <div class="text">DELICIOUS BUNS</div>-->
+<!--            <img class="container-module__item" src="images/img4.png" alt="bakery"/>-->
+<!--        </div>-->
+<!--        <div class="container-modules">-->
+<!--            <div class="text">COLD BEVERAGES</div>-->
+<!--            <img class="container-module__item" src="images/img5.png" alt="cold drinks"/>-->
+<!--        </div>-->
+<!--    </div>-->
+
 
     <div class="main-part">
         <img class="main__picture" src="images/img6.png" alt="coffee"/>
@@ -84,6 +124,10 @@
     <ul>Contacts:
         <li>Address: Saint-Petersburg, Lenin Street, 12</li>
         <li>Email: co_n_go@gmail.com</li>
+        <li id="watch">
+            <script type="text/javascript"> watch();</script>
+        </li>
+        <li><span id="loadtime"></span></li>
     </ul>
 </footer>
 </body>
