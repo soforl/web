@@ -5,6 +5,11 @@
     <title>CO&GO</title>
     <link href="outlines.css" rel="stylesheet">
     <meta name="description" content="Coffee shop">
+    <script type="text/javascript" src="/scripts/script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=Gravitas+One&display=swap"
+          rel="stylesheet">
 </head>
 <body>
 <header>
@@ -14,7 +19,7 @@
     </div>
     <nav class="header-nav right">
         <a href="index.html" class="nav__home">HOME</a>
-        <a href="page2.html" class="nav__menu">MENU</a>
+        <a href="page2.html" class="nav__menu nav__active-page">MENU</a>
         <a href="page3.html" class="nav__about">ABOUT US</a>
     </nav>
 </header>
@@ -72,10 +77,16 @@
 
 </main>
 <footer>
-    <ul><b>Contacts</b>
+    <ul>Contacts:
         <li>Address: Saint-Petersburg, Lenin Street, 12</li>
-        <li>co_n_go@gmail.com</li>
+        <li>Email: co_n_go@gmail.com</li>
+        <li id="watch">
+            <script type="text/javascript"> watch();</script>
+        </li>
+        <li><span id="loadtime"></span></li>
+
     </ul>
+
 </footer>
 </body>
 </html>
