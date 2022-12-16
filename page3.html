@@ -5,36 +5,92 @@
     <title>CO&GO</title>
     <link href="outlines.css" rel="stylesheet">
     <meta name="description" content="Coffee shop">
+    <script type="text/javascript" src="/scripts/script.js"> </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=Gravitas+One&display=swap" rel="stylesheet">
 </head>
 <body>
 <header>
-    <img src="" alt=""/>
-    <h1>CO&GO</h1>
-    <nav>
-        <ul>
-            <li><a href="index.html"><h5>home</h5></a></li>
-            <li><a href="page2.html"><h5>drinks</h5></a></li>
-            <li><a href="page3.html"><h5>about us</h5></a></li>
-        </ul>
+    <div class="left">
+        <img class="header__logo" src="images/logo.png" alt="logo"/>
+        <div class="header__title">CO&GO</div>
+    </div>
+    <nav class="header-nav right">
+        <a href="index.html" class="nav__home">HOME</a>
+        <a href="page2.html" class="nav__menu">MENU</a>
+        <a href="page3.html" class="nav__about nav__active-page">ABOUT US</a>
     </nav>
 </header>
 <main>
-    <img src="images/img2.jpg" alt="coffee" width="500" height="300"/>
-    <p>
-        One day the owner of CO&GO was so depressed and didn’t want to go out of her bed,
-        but the smell of the coffee from the nearest coffee shop made her get up, and s
-        he found out that this world is so beautiful with a cup of the greatest drink.
-    </p>
+    <div class="main-part">
+        <img class="main__picture" src="images/atmo1.png" alt="autumn"/>
+        <div class="main__text">
+            <p>
+                One day the owner of CO&GO was so depressed and did not want to go out of her bed,
+                but the smell of the coffee from the nearest coffee shop made her get up.
+                She went out of her flat, took coffee and saw pictures that made her really happy.
+                She noticed leaves that had fallen to streets and people enjoying their life, and
+                she understood that this world is so beautiful with a cup of the greatest drink.
+            </p>
 
-    <p>
-        So we hope that our coffee will help you in the darkest times and will be part of the brightest ones!
-    </p>
-    <p> Our Coffe shop is well known worldwide!</p>
+            <p>
+                The other day the owner started to build her coffee business and chose the best
+                types of beans and barista.
+            </p>
+
+            <p>
+                So we hope that our coffee will help you in the darkest times and will be part of the brightest ones!
+            </p>
+
+        </div>
+    </div>
+    <div>
+        <p>
+            We wanted to know which type of coffee people prefer to drink most of all,
+            so there are results of our investigation!
+        </p>
+    </div>
+
+    <table>
+        <thead>
+        <tr>
+            <th>Type of coffee</th>
+            <th>Percent of people</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Americano</td>
+                <td>20%</td>
+            </tr>
+            <tr>
+                <td>Espresso</td>
+                <td>5%</td>
+            </tr>
+            <tr>
+                <td>Cappuccino</td>
+                <td>35%</td>
+            </tr>
+            <tr>
+                <td>Latte</td>
+                <td>30%</td>
+            </tr>
+            <tr>
+                <td>Raf</td>
+                <td>10%</td>
+            </tr>
+        </tbody>
+    </table>
 </main>
 <footer>
-    <ul><b>Contacts</b>
+    <ul>Contacts:
         <li>Address: Saint-Petersburg, Lenin Street, 12</li>
-        <li>co_n_go@gmail.com</li>
+        <li>Email: co_n_go@gmail.com</li>
+        <li id="watch">
+            <script type="text/javascript"> watch();</script>
+        </li>
+        <li><span id="loadtime"></span></li>
     </ul>
 </footer>
 </body>
