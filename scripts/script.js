@@ -1,4 +1,4 @@
-function watch(){
+function watch() {
     var date = new Date();
     var hours = date.getHours();
     var minutes = date.getMinutes();
@@ -12,6 +12,7 @@ function watch(){
 
 var before_loadtime = new Date().getTime();
 window.onload = Pageloadtime;
+
 function Pageloadtime() {
     var aftr_loadtime = new Date().getTime();
     // Time calculating in seconds
@@ -19,18 +20,6 @@ function Pageloadtime() {
 
     document.getElementById("loadtime").innerHTML = "time: <font color='#73584B'><b>" + pgloadtime + "</b></font> seconds";
 }
-
-
-// document.getElementById("mouse").addEventListener("mouseenter", mouseEnter);
-// document.getElementById("mouse").addEventListener("mouseleave", mouseLeave);
-//
-// function mouseEnter() {
-//     document.getElementById("mouse").style.fontWeight = "bold";
-// }
-//
-// function mouseLeave() {
-//     document.getElementById("mouse").style.fontWeight = "serif";
-// }
 
 class ItcSlider {
     static #EL_WRAPPER = 'wrapper';
@@ -417,7 +406,7 @@ class ItcSlider {
         this.#state.elListItem.forEach((el, index) => {
             el.style.transform = '';
             this.#state.activeItems.push(index < this.#state.countActiveItems ? 1 : 0);
-            this.#state.els.push({ el, index, order: index, translate: 0 });
+            this.#state.els.push({el, index, order: index, translate: 0});
         });
         if (this.#config.loop) {
             const lastIndex = this.#state.elListItem.length - 1;
@@ -467,3 +456,5 @@ class ItcSlider {
 document.addEventListener('DOMContentLoaded', () => {
     ItcSlider.createInstances();
 });
+
+

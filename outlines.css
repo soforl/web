@@ -175,6 +175,19 @@ ul {
     color: #73584B;
 }
 
+.list_menu {
+    text-align: center;
+    align-items: center;
+    font-family: 'Gravitas One', serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    color: #73584B;
+}
+
 
 .picture {
     width: 250px;
@@ -182,9 +195,27 @@ ul {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+.pict_menu {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    /*align-items: center;*/
+    /*margin: 15px;*/
+}
+
 @media screen and (max-width: 1000px) {
     .main__picture {
         display: none;
+    }
+    .pict_menu{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .pict_menu{
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -194,50 +225,50 @@ ul {
     }
 }
 
-table {
-    font-family: 'Gravitas One', serif;
-    display: grid;
-    grid-template-columns:
-    minmax(100px, 1fr)
-    minmax(100px, 1.67fr);
-    margin: 15px;
-}
+/*table {*/
+/*    font-family: 'Gravitas One', serif;*/
+/*    display: grid;*/
+/*    grid-template-columns:*/
+/*    minmax(100px, 1fr)*/
+/*    minmax(100px, 1.67fr);*/
+/*    margin: 15px;*/
+/*}*/
 
-thead,
-tbody,
-tr {
-    display: contents;
-}
+/*thead,*/
+/*tbody,*/
+/*tr {*/
+/*    display: contents;*/
+/*}*/
 
-th,
-td {
-    padding: 15px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
+/*th,*/
+/*td {*/
+/*    padding: 15px;*/
+/*    overflow: hidden;*/
+/*    text-overflow: ellipsis;*/
+/*    white-space: nowrap;*/
+/*}*/
 
-th {
-    background: #B5A592;
-    text-align: left;
-    font-weight: normal;
-    font-size: 1.1rem;
-    color: #73584B;
-}
+/*th {*/
+/*    background: #B5A592;*/
+/*    text-align: left;*/
+/*    font-weight: normal;*/
+/*    font-size: 1.1rem;*/
+/*    color: #73584B;*/
+/*}*/
 
-th:last-child {
-    border: 0;
-}
+/*th:last-child {*/
+/*    border: 0;*/
+/*}*/
 
-td {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    color: #73584B;
-}
+/*td {*/
+/*    padding-top: 10px;*/
+/*    padding-bottom: 10px;*/
+/*    color: #73584B;*/
+/*}*/
 
-tr:nth-child(even) td {
-    background: #B5A592;
-}
+/*tr:nth-child(even) td {*/
+/*    background: #B5A592;*/
+/*}*/
 
 #watch {
     color: #73584B;
@@ -401,5 +432,38 @@ tr:nth-child(even) td {
         flex: 0 0 100%;
         min-width: 100%;
     }
+}
+
+#daysVariants{
+    border-radius:20px;
+    background-color: #85B7BC;
+}
+
+#lessonsVariants{
+    border-radius:20px;
+    background-color: #85B7BC;
+}
+
+#scheduleTable {
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    margin: 15px 10px;
+
+}
+
+#use{
+    border-radius:20px;
+    background-color: #85B7BC;
+}
+
+#elem{
+    font-family: 'Gravitas One', serif;
+    display: grid;
+    margin: 15px;
+}
+
+table {
+    border: 5px;
 }
 

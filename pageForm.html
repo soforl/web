@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web форма</title>
+    <link href="outlines.css" rel="stylesheet">
+    <meta name="description" content="Coffee shop">
+    <script type="text/javascript" src="/scripts/script.js"></script>
+<!--    <script type="text/javascript" src="/scripts/formScript.js"></script>-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=Gravitas+One&display=swap"
+          rel="stylesheet">
+</head>
+<body>
+<header>
+    <div class="left">
+        <img class="header__logo" src="images/logo.png" alt="logo"/>
+        <a href="pageForm.html" class="header__title">CO&GO</a>
+    </div>
+    <nav class="header-nav right">
+        <a href="index.html" class="nav__home">HOME</a>
+        <a href="page2.html" class="nav__menu">MENU</a>
+        <a href="page3.html" class="nav__about">ABOUT US</a>
+    </nav>
+</header>
+<main>
+    <form name="schedule" id="scheduleTable" onsubmit="creating(); return false;">
+        <select name="days" id="daysVariants">
+            <option value="0" selected="selected">select number of days</option>
+            <option value="5">5 days</option>
+            <option value="6">6 days</option>
+        </select>
+
+        <select name="lessons" id="lessonsVariants">
+            <option value="0" selected="selected">select number of lessons</option>
+            <option value="1">1 lesson</option>
+            <option value="2">2 lessons</option>
+            <option value="3">3 lessons</option>
+            <option value="4">4 lessons</option>
+            <option value="5">5 lessons</option>
+            <option value="6">6 lessons</option>
+            <option value="7">7 lessons</option>
+            <option value="8">8 lessons</option>
+        </select>
+        <input type="submit" id="use" value="use parameters">
+    </form>
+    <div id="elem"></div>
+
+</main>
+<footer>
+    <ul>Contacts:
+        <li>Address: Saint-Petersburg, Lenin Street, 12</li>
+        <li>Email: co_n_go@gmail.com</li>
+        <li id="watch">
+            <script type="text/javascript"> watch();</script>
+        </li>
+        <li><span id="loadtime"></span></li>
+    </ul>
+</footer>
+</body>
+<script type="text/javascript" src="/scripts/formScript.js"></script>
+</html>
